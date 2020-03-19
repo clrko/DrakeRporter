@@ -163,10 +163,10 @@ figcaption {
 img {
 	border: 1px solid #000;
 	border-radius: 5px;
-	width: 22.5rem;
+	/* width: auto	; */
 	height: 21rem;
 	text-transform: capitalize;
-	margin-top: .4em;
+	margin: .4em .1em 0;
 }
 
 a {
