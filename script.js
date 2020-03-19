@@ -1,11 +1,43 @@
-function switchTheme(event) {
+const rootElement = document.documentElement
+
+
+
+/*---------DrakeRProter page-----------*/
+
+const switchTheme = (event) => {
     if (event.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        rootElement.setAttribute('data-theme', 'dark');
     }
     else {
-        document.documentElement.setAttribute('data-theme', 'light');
+        rootElement.setAttribute('data-theme', 'light');
     }    
 }
-
 const toggler = document.querySelector('#toggler');
 toggler.addEventListener('change', switchTheme, false);
+
+
+
+/*---------Real page-----------*/
+
+const darkMode = document.getElementById('DarkMode');
+
+darkMode.onclick = () => {
+    if (rootElement.getAttribute('data-theme') === 'dark') {  // Dark mode
+        rootElement.setAttribute('data-theme', 'light');
+        console.log('light');
+    } 
+    else { // Light mode
+        rootElement.setAttribute('data-theme', 'dark');
+        console.log('dark');
+    }
+
+    //sessionStorage.getItem('changeMode', rootElement.getAttribute('data-theme'));
+}
+
+//rootElement.setAttribute('data-theme',sessionStorage.getItem('changeMode'));
+
+
+
+
+
+
