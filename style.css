@@ -3,6 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+
 /*HEADER*/
 
 header{
@@ -248,3 +255,10 @@ footer .droite{
     flex-direction: column;
 }
 }
+
+/*----------DarkMode---------*/
+
+[data-theme="dark"] {
+    --background-color: black;
+    --text-color: white;
+  }
