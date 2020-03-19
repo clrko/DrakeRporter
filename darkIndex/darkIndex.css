@@ -4,8 +4,31 @@
     box-sizing: border-box;
 }
 
+/*Dark Mode*/
+
+:root {
+    --main-bg-color: #636468;
+    --secondary-bg-color:#EEE;
+    --tertiary-bg-color: rgb(51,51,51);
+    --light-bg-color: rgba(172, 24, 24, 0.767);
+    --main-txt-color: #EEE;
+    --secondary-txt-color: rgb(51,51,51);
+    --light-txt-color: rgba(172, 24, 24, 0.767);
+    /* to read: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+  }
+
+[data-theme="dark"] {
+    --main-bg-color: #EEE;
+    --secondary-bg-color: rgb(51,51,51);
+    --tertiary-bg-color: #636468;
+    --light-bg-color: rgba(209, 32, 32, 0.767);
+    --main-txt-color: rgb(51,51,51);
+    --secondary-txt-color: #EEE ;
+    --light-txt-color: rgba(209, 32, 32, 0.767);
+  }
+
 body {
-    background-color: #636468;
+    background-color: var(--main-bg-color);
 }
 
 main {
@@ -16,7 +39,7 @@ hr {
     width: 80%;
     display: block;
     margin: 0 auto;
-    border: 1px solid lightgrey;
+    border: 1px solid var(--main-txt-color);
 }
 
 
@@ -25,7 +48,7 @@ header{
     width: 100%;
     height:auto;
     display: inline-block;
-    background: #EEE;
+    background: var(--secondary-bg-color);
     font-family: 'Open Sans Condensed', sans-serif;
     border-radius: 0px 0px 20px 20px;
 }
@@ -38,13 +61,13 @@ header h1{
     justify-content: center;
 }
 header h1 span{
-    color: rgba(172, 24, 24, 0.767);
+    color: var(--light-txt-color);
     font-size: 130%;
     font-family: 'Permanent Marker', cursive;
 }
 header nav{
     width: 100%;
-    background: rgb(51,51,51);
+    background: var(--tertiary-bg-color);
     padding: 12px;
 }
 header nav ul{
@@ -61,26 +84,26 @@ nav ul li{
     list-style-type: none;
     align-items:center;
     display: flex;
-    color:white;
+    color:var(--main-txt-color);
 }
 header nav ul li a{
     width: 20%;
-    color: #EEE
+    color: var(--secondary-bg-color);
 
 }
 nav ul li a:hover{
-    color:rgba(172, 24, 24, 0.767);
+    color: var(--light-txt-color);
 }
 header nav ul li .nomLi{
     display: none;
 }
 nav ul #lienHome{
-    background-color:rgba(172, 24, 24, 0.767);
+    background-color: var(--light-bg-color);
     padding: 6px;
     border-radius:6px;
 }
 nav ul #lienHome:hover a{
-    color:rgb(51, 51, 51);
+    color:var(--secondary-txt-color);
 }
 
 
@@ -88,7 +111,7 @@ nav ul #lienHome:hover a{
 
 main h1 {
     margin: 5% 0;
-    color:#EEE;
+    color: var(--main-txt-color);
     font-size: 2em;
 }
 
@@ -120,7 +143,7 @@ main h1 {
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    background-color: #EEE;
+    background-color: var(--secondary-bg-color);
 }
 
 #bio-container div p {
@@ -134,8 +157,8 @@ main h1 {
 #bio-container div h2 {
     text-align: center;
     margin: 3% 0;
-    background-color: rgb(51,51,51);
-    color: #EEE;
+    background-color: var(--tertiary-bg-color);
+    color: var(--main-txt-color);
 	padding: 6px 3px;
     border-radius: 5px;
 }
@@ -155,7 +178,7 @@ main h1 {
 
 figure a {
     text-decoration: none;
-    color: rgb(51, 51, 51);
+    color: var(--secondary-txt-color);
 }
 
 
@@ -163,7 +186,7 @@ figure a {
 	text-align: center;
 	overflow: hidden;
 	white-space: pre-wrap;
-	background-color: #EEE;
+	background-color: var(--secondary-bg-color);
 }
 
 .description::first-letter {
@@ -181,7 +204,7 @@ figure {
     "I3";
     justify-items: center;
     align-items: center;
-    background-color: #EEE;
+    background-color: var(--secondary-bg-color);
 }
 
 figcaption {
@@ -189,8 +212,8 @@ figcaption {
 	font-weight: bold;
     text-align: center;
 	font-size: 1rem;
-    background-color: rgb(51,51,51);
-    color: #EEE;
+    background-color: var(--tertiary-bg-color);
+    color: var(--main-txt-color);
 	padding: 6px 3px;
     border-radius: 5px;
     width: 280px;
@@ -221,7 +244,7 @@ a.button {
     border-radius:2px;
     text-decoration:none;
     font-weight:300;
-    color:#FFFFFF;
+    color: var(--main-txt-color);
     text-align:center;
     transition: all 0.2s;
     width: fit-content;
@@ -230,7 +253,7 @@ a.button {
 
     a.button:hover {
     color:#000000;
-    background-color:#FFFFFF;
+    background-color: var(--secondary-bg-color);
     }
 
 
@@ -244,7 +267,7 @@ footer{
     flex-direction: column-reverse;
     width: 100%;
     padding: 0px;
-    background-color:rgb(51, 51, 51);
+    background-color:var(--tertiary-bg-color);
 }
 footer .gauche{
     display: flex;
@@ -264,7 +287,7 @@ footer .gauche{
 }
 footer .gauche i{
     text-decoration: none;
-    color: #EEE;
+    color: var(--main-txt-color);
     padding: 5px;
     font-size: 2rem;
 }
@@ -280,12 +303,12 @@ footer .droite{
 }
 footer .droite a{
     text-decoration: none;
-    color: #EEE;
+    color: var(--main-txt-color);
     padding: 5px;
     font-size: 1rem;
 }
 footer .gauche i:hover, footer .droite a:hover{
-    color: rgba(172, 24, 24, 0.767);
+    color: var(--light-txt-color);
 }
 
 
@@ -297,7 +320,7 @@ footer .gauche i:hover, footer .droite a:hover{
     header{
         display:flex;
         height: 200px;
-        background: linear-gradient(130deg, #EEE 37%,rgb(51, 51, 51) 37%);
+        background: linear-gradient(130deg, var(--secondary-bg-color) 37%,rgb(51, 51, 51) 37%);
         
         
     }
@@ -335,23 +358,23 @@ footer .gauche i:hover, footer .droite a:hover{
         list-style-type: none;
         align-items:center;
         display: flex;
-        color:white;
+        color:var(--main-txt-color);
     }
     nav ul li a {
         text-decoration: none;
-        color:white;
+        color:var(--main-txt-color);
     }
     nav ul li .icone{
         display: none;
     }
     nav ul #lienHome{
-        background-color:rgba(172, 24, 24, 0.767);
+        background-color:var(--light-bg-color);
         padding-right: 10px;
         padding-left: 10px;
         border-radius:6px;
     }
     nav ul #lienHome a:hover{
-        color: rgb(51, 51, 51);
+        color: var(--secondary-txt-color);
     }
 
     /*-------------Body---------------*/
@@ -397,7 +420,7 @@ footer .gauche i:hover, footer .droite a:hover{
     
     .article-item:hover {
         border: 8px #555 double;
-        background-color: rgba(172,24,24,0.767);
+        background-color: var(--light-bg-color);
         letter-spacing:2px;
         cursor: pointer;
      }
@@ -454,7 +477,7 @@ footer .gauche i:hover, footer .droite a:hover{
 
     footer .gauche i{
         text-decoration: none;
-        color: #EEE;
+        color: var(--main-txt-color);
         padding: 5px;
         font-size: 2rem;
     }
