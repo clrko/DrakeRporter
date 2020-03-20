@@ -31,10 +31,10 @@ darkMode.onclick = () => {
         console.log('dark');
     }
 
-    //sessionStorage.getItem('changeMode', rootElement.getAttribute('data-theme'));
+    sessionStorage.getItem('changeMode', rootElement.getAttribute('data-theme'));
 }
 
-//rootElement.setAttribute('data-theme',sessionStorage.getItem('changeMode'));
+rootElement.setAttribute('data-theme',sessionStorage.getItem('changeMode'));
 
 
 
