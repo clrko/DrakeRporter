@@ -1,8 +1,8 @@
 const rootElement = document.documentElement
 
 
-
-/*---------DarkMode DrakeRPorter page-----------*/
+/*--------------DrakeRPorter page-----------*/
+/*DarkMode*/ 
 
 const switchTheme = (event) => {
     if (event.target.checked) {
@@ -17,8 +17,29 @@ const toggler = document.querySelector('#toggler');
 if (toggler) toggler.addEventListener('change', switchTheme, false);
 
 
+/*confirmation message when click on a url*/
+const showAlert = e => {
+    let txtAlert = 'Tu es sûr de vouloir aller par là?';
+    const reponse = window.confirm(txtAlert);
+    if (!reponse) {
+        e.preventDefault();
+    }
+};
 
-/*---------DarkMode Real page-----------*/
+
+const confirmLink = document.querySelector('#confirmLink');
+if (confirmLink) confirmLink.addEventListener('click', showAlert);
+
+/* onClick="showAlert(event)" peut être utilisé  dans le html balise <a> à la palce des deux lignes plus haut*/
+
+
+
+
+
+
+/*---------Website - Homepage-----------*/
+
+/*DarkMode*/
 
 const darkMode = document.querySelector('#darkMode');
 
@@ -39,19 +60,5 @@ if (darkMode) {
 
 
 
-/*-------------confirmation message when click on a url--------*/
-const showAlert = e => {
-    let txtAlert = 'Tu es sûr de vouloir aller par là?';
-    const reponse = window.confirm(txtAlert);
-    if (!reponse) {
-        e.preventDefault();
-    }
-};
-
-
-const confirmLink = document.querySelector('#confirmLink');
-if (confirmLink) confirmLink.addEventListener('click', showAlert);
-
-/* onClick="showAlert(event)" peut être utilisé  dans le html balise <a> à la palce des deux lignes plus haut*/
 
 
