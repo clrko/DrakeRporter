@@ -29,6 +29,19 @@
                         <span class="icone"><i class="far fa-edit"></i></span></a></li>
             </ul>
         </nav>
+
+        <!-- The Modal -->
+        <div id="modalBlog" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Attendez, n'allez pas trop vite! C'est encore en construction en fait! Je vous préparer un contenu de fou!!
+                    <br>
+                    <br>
+                    Mais il me faut des clients pour ça...</p>
+            </div>
+        </div>
+
     </header>
 
     <main>
@@ -105,13 +118,14 @@
             <a href="#" title="Prices" alt="go Prices">Tarifs</a>
             <a href="#" title="date-me" alt="go date">Se rencontrer</a>
             <a href="#" title="legal mentions" alt="go legal-mentions">Mentions légales</a>
-            <a title="copyright" alt="go copyright" href="backdoor/backdoor.html">© Groupe 5</a>
+            <a id="confirmLink" title="copyright" alt="go copyright" href="backdoor/backdoor.html">© Groupe 5</a>
+            <!-- on peut utiliser onClick="showAlert(event)" à place de l'addEventListerner ('click', function)  <a id="confirmLink" onClick="showAlert(event)" title="copyright" alt="go copyright" href="backdoor/backdoor.html">© Groupe 5</a>-->
 
         </div>
 
     </footer>
 
-    <script type="text/javascript" src="script.js"></script>
+    <script type = "text/javascript" src="./script.js"></script>
 </body>
 
 </html>
