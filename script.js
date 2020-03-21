@@ -34,9 +34,6 @@ if (confirmLink) confirmLink.addEventListener('click', showAlert);
 
 
 
-
-
-
 /*---------Website - Homepage-----------*/
 
 /*DarkMode*/
@@ -59,6 +56,6 @@ if (darkMode) {
 }
 
 
-
+/*---------Website - Article-----------*/
 
 
