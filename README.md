@@ -2,6 +2,7 @@
 # DrakeRporter
 
 👉[The public site can be seen here](https://clrko.github.io/DrakeRporter/)
+
 👉[The hidden site can be seen here](https://clrko.github.io/DrakeRporter/darkIndex/darkIndex.html)
 
 The **Drake R. Porter** showcase website was the first project we developed as part of the Wild Code School curriculum.
